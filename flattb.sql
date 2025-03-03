@@ -1,4 +1,13 @@
-CREATE TABLE dbo.Flattb 
+select top 10 * from FlatTable
+
+select top 5* from tna.Rostering
+select top 5* from tna.ShiftMst
+select top 5* from dbo.ReqRec_EmployeeDetails
+select top 5* from GeoConfig.EmployeesLocationMapping
+select top 5* from GeoConfig.GeoConfigurationLocationMst
+select top 5* from dbo.SETUP_EMPLOYEESTATUSMST
+
+CREATE TABLE dbo.Flattable
 (
     EmpCode VARCHAR(100) PRIMARY KEY,
     ed_Salutation VARCHAR(100) NULL,
@@ -18,7 +27,7 @@ CREATE TABLE dbo.Flattb
     IPRange NVARCHAR(MAX) NULL  -- Storing JSON as NVARCHAR(MAX)
 );
 
-INSERT INTO dbo.Flattb (
+INSERT INTO flattable (
     EmpCode,
     ed_Salutation,
     ed_firstname,
